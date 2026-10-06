@@ -1,0 +1,1 @@
+- [Imtithal Visitor Analytics](project_imtithal_visitor_analytics.md) — migration 0012 review (2026-08-25): missing LastActivityAt index (confirmed 380x via EXPLAIN), all-time/no-date-bound queries don't prune partitions, partition-boundary +00 fix verified real, default-partition trap reproduced

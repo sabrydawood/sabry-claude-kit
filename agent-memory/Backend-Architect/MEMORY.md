@@ -1,0 +1,10 @@
+# Memory Index — Backend Architect
+
+- [Authz fix: read AND write need the same predicate](feedback_authz_fix_read_and_write_same_predicate.md) — ownership check must run before idempotent/status early-returns, else the "fix" still leaks data.
+- [Don't force-fit an existing scope engine](feedback_dont_force_fit_scope_engine.md) — check the entity's data model has the columns each role-level actually needs before reusing a matrix; mismatches fail silently (DENY_ALL or over-broad).
+- [Sabry's security-task handoff style](user_sabry_security_task_style.md) — pre-scoped with file:line evidence, explicit decisions, hard git/test constraints, requires empirical proof before "done".
+- [Dual-layer authz: grant can be inert](feedback_dual_layer_authz_grant_can_be_inert.md) — a service-layer hardcoded role check under a route's permission gate can make a newly-granted permission a no-op; check the service, not just the route, before deciding who gets a new key.
+- [Est8Core: effective-timezone model (2026-08-09)](project_est8core_effective_timezone_2026-08-09.md) — single resolver in Core/Utils/Timezone.Util.ts, branch → tenant → UTC, where every consumer lives.
+- [Est8Core: advisor corrections on the timezone task](feedback_est8core_timezone_advisor_corrections.md) — verify middleware order per-file, tenant-scope every query+cache key, match a spec-named mechanism exactly, check file sizes first, shared catalogs forbid module keys; round 2: validate with the real API (`Intl`) not a regex, grep test files for a formatting change's old output across the whole reachable tree.
+- [Negative control for guard fixes](feedback_negative_control_for_guard_fixes.md) — a race/staleness guard needs its adversarial test proven to FAIL when the guard is disabled, not just proven to pass when it's on.
+- [Grep write sites before widening a guard](feedback_grep_write_sites_before_widening_guard.md) — "field F implies condition C" is a claim about the whole codebase's write graph; verify with grep across every write site, not the one function you're reading.
