@@ -18,6 +18,11 @@
       "usageCount": 0,
       "lastUsedAt": 1790909271794,
       "lastUsedNumStartups": 0
+    },
+    "cc-plugin-diff@builtin": {
+      "usageCount": 0,
+      "lastUsedAt": 1791513971057,
+      "lastUsedNumStartups": 0
     }
   }
 }
