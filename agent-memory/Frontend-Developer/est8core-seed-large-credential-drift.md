@@ -10,7 +10,7 @@ email is `kazouya44@gmail.com`, not the documented `seed-large@est8core.dev` fro
 `Server/Scripts/seed-full-tenant.ts:157` (`SEED_PASSWORD = "Seed@12345"`). `updated_at` on that
 row was `2026-08-01T16:01:36Z` — changed same-day, likely by a parallel session actively testing
 against this tenant (a separate isolated browser page was open on `seed-large.localhost:3002/p/prop-0800`,
-context `verify-t6-opus`, at the same time). The old default credentials return
+context `verify-t6-sonnet`, at the same time). The old default credentials return
 `401 AUTH_INVALID_CREDENTIALS`.
 
 **Why not just log in with the new email:** it resembles a personal account (same family as the
